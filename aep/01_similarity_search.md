@@ -1,5 +1,7 @@
 # Time Series Similarity Search Module
 
+Contributors: @MatthewMiddlehurst @TonyBagnall @baraline @hadifawaz1999
+
 ## Overview
 
 This AEP introduces a new module and base cass for time series similarity search.
