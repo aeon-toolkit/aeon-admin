@@ -32,13 +32,13 @@ Base class:
           - returns self
       - predict(q): 
           - takes q: a single/multiple univariate/multivariate series (internal type?) tbc
-          - iterate over X, find closest k matches, some abstract method to do the iteration
+          - iterate over X, find closest k matches, *some abstract method to do the iteration)
           - returns indexes of closest k /distances/series?
  
     - abstract:
       - \_fit()
       - \_predict()
-      - \_iterator()
+      - \_iterator() maybe?
 
 Subclasses:
     Optimisations:
@@ -47,7 +47,7 @@ Subclasses:
 
 ## Considerations and Alternatives
 
-TODO
+do we even need a base class? Maybe just have a suite of functions?
 
 ## Discussion
 
