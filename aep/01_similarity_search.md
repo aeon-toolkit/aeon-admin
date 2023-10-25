@@ -11,7 +11,22 @@ This AEP introduces a new module and base cass for time series similarity search
 At its simplest, similarity search is the task of finding the closest subseries in 
 series X to given series q (<= length of X) given a similarity measure.
 
-TODO: use cases and examples
+To obtain the most similar subserie, a distance vector, often called distance
+profile, must be computed. This distance profile will store the similarity
+between the query and all candidate subseries. In this context, the most 
+similar subseries will be the one with maximize the similarity measure ( or
+minimize the distance or dissimilarity).
+
+The main research challenge for the distance profiles is the computational 
+complexity. Most of the contributions in the litterature are aimed toward
+optimizing the (di)similarity functions (e.g. Mueen algortihm for the 
+normalized euclidean distance), proposing lower bounds to prune subseries,
+or approximations methods. 
+
+In terms of use cases, distance profiles are the base component of the matrix 
+profile.
+
+TODO: add more use cases and references
 
 ## Implementation
 
