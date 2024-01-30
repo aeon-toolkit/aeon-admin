@@ -88,7 +88,81 @@ arXiv:2304.13029.
 new effective and scalable similarity-based classifier for time series. arXiv
 preprint arXiv:2304.05800.
 
-## Project #2: ?
+## Project #2: Improving the computational complexity of the Shapelet Transform 
+
+The goal of this project is to propose a new implementation for the Shapelet Transform [1]
+algorithm based on the computational optimization offered by Similarity Search algorithms,
+and benchmark it against the current aeon implementation. Depending on the speed of progress,
+the implementation could also be adapted to the case of the Dilated Shapelet Transform [5].
+
+__Complexity__: HIGH
+
+__Duration__ 350 hours
+
+__Mentors__: Antoine Guillaume ([@baraline](https://github.com/baraline)) and
+Ali Ismail-Fawaz ([@hadifawaz1999](https://github.com/hadifawaz1999))
+
+### Description
+
+A shapelet is defined as a time series subsequence representing a pattern of interest
+that we wish to search for in time series data. Shapelet-based algorithms can be used
+for a wide range of time series tasks. In this project, we will focus on its core
+application, which is to create an embedding of the input time series.
+
+Our goal in this project will be to optimize the code related to the shapelet
+transform method, which takes as input a set of shapelets and a time series dataset,
+and give as output a tabular dataset containing the features characterizing the
+presence (or absence) of each shapelet in the input time series (more information
+in [1] and [2]).
+
+Similarity search is another field of time series, which has proposed greatly optimized
+algorithms (see [3] and [4]) for the task of finding the best matches of a subsequence
+inside another time series. As this task is extremely similar to what is done in the
+shapelet transform, we want to adapt these algorithms to the context of shapelets,
+in order to achieve significant speed-ups.
+
+### Required Skills
+
+- Python 3
+- Git and GitHub
+- Array manipulation with numpy
+- Basic understanding of machine learning, specifically distance measures
+
+Optional but useful skills:
+- Writing code using `numba`
+
+### Expected Outcome(s)
+
+- A Python implementation of the Shapelet Transform using the computational 
+optimization from Similarity Search algorithms.
+- An evaluation of the mentees implementation against the original, showing that
+the implementation produces the same output space given the same input.
+- A benchmark of the mentees implementation against the original, showing the 
+performance gains.
+
+### References
+
+1. Hills, J., Lines, J., Baranauskas, E., Mapp, J. and Bagnall, A., 2014.
+Classification of time series by shapelet transformation. Data mining and knowledge
+discovery, 28, pp.851-881.
+2. Bostrom, A. and Bagnall, A., 2017. Binary shapelet transform for multiclass time
+series classification. Transactions on Large-Scale Data-and Knowledge-Centered Systems
+XXXII: Special Issue on Big Data Analytics and Knowledge Discovery, pp.24-46.
+3. Yeh, C.C.M., Zhu, Y., Ulanova, L., Begum, N., Ding, Y., Dau, H.A., Silva, D.F.,
+Mueen, A. and Keogh, E., 2016, December. Matrix profile I: all pairs similarity joins
+for time series: a unifying view that includes motifs, discords and shapelets. In 2016
+IEEE 16th international conference on data mining (ICDM) (pp. 1317-1322). Ieee.
+4. Zhu, Y., Zimmerman, Z., Senobari, N.S., Yeh, C.C.M., Funning, G., Mueen, A., Brisk,
+P. and Keogh, E., 2016, December. Matrix profile ii: Exploiting a novel algorithm and
+gpus to break the one hundred million barrier for time series motifs and joins. In 2016
+IEEE 16th international conference on data mining (ICDM) (pp. 739-748). IEEE.
+5. Guillaume, A., Vrain, C. and Elloumi, W., 2022, June. Random dilated shapelet
+transform: A new approach for time series shapelets. In International Conference on
+Pattern Recognition and Artificial Intelligence (pp. 653-664). Cham: Springer
+International Publishing.
+
+
+## Project #3: ?
 
 (SUMMARY HERE)
 
@@ -101,11 +175,8 @@ __Mentors__: (MENTOR NAMES HERE)
 ### Description
 
 
-
 ### Required Skills
 
 
-
 ### Expected Outcome(s)
-
 
