@@ -24,9 +24,15 @@ __Mentors__: (MENTOR NAMES HERE)
 
 ### Description
 
-### Expected Outcome(s)
+
 
 ### Required Skills
+
+
+
+### Expected Outcome(s)
+
+
 
 ## Project #2: ?
 
@@ -40,6 +46,12 @@ __Mentors__: (MENTOR NAMES HERE)
 
 ### Description
 
-### Expected Outcome(s)
+
 
 ### Required Skills
+
+
+
+### Expected Outcome(s)
+
+
