@@ -162,21 +162,102 @@ Pattern Recognition and Artificial Intelligence (pp. 653-664). Cham: Springer
 International Publishing.
 
 
-## Project #3: ?
+## Project #3: Machine learning from EEG with aeon-neuro
 
-(SUMMARY HERE)
+The goal of this project is to help develop the `aeon` sister toolkit, `aeon-neuro` 
+to provide structured tools for improved machine learning from EEG data.
 
-__Complexity__: (LOW/MEDIUM/HIGH)
+__Complexity__: HIGH
 
-__Duration__ (175/350) hours
+__Duration__ 350 hours
 
-__Mentors__: (MENTOR NAMES HERE)
+__Mentors__: Tony Bagnall ([@TonyBagnall](https://github.com/TonyBagnall)) and Aiden 
+Rushbrooke ([@AidenRushbrooke](https://github.com/AidenRushbrooke))
 
 ### Description
 
 
+EEG (Electroencephalogram) data are high dimensional time series that are used in
+medical, psychology and brain computer interface research. For example, EEG are
+used to detect epilepsy and to control decvices such as mice. There is a huge body
+of work on analysing and learning from EEG, but there is a wide disparity of
+tools, practices and systems used. This project will help members of the `aeon`
+team who are currently researching techniques for EEG classification [1] and
+developing an aeon sister toolkit, ``aeon-neuro`` [LINK]. We will work together to
+improve the structure and documentation for aeon-neuro, help integrate the
+toolkit with existing EEG toolkits such as NM [2], provide interfaces to standard data
+formats such as BIDS [3] and help develop and assess a range of EEG classification
+algorithms.
+
 ### Required Skills
+
+- Python 3
+- Git and GitHub
+- Array manipulation with numpy
+- Basic understanding of machine learning, specifically classification algorithms
 
 
 ### Expected Outcome(s)
+
+- Improved documentation and structure for the `aeon-neuro` toolkit.
+- Better integration with existing EEG toolkits and data formats.
+- Increased functionality for feature extraction and classification of EEG data.
+
+### References
+
+1. Aiden Rushbrooke, Jordan Tsigarides, Saber Sami, Anthony Bagnall,
+Time Series Classification of Electroencephalography Data, IWANN 2023.
+2. MNE Toolkit, https://mne.tools/stable/index.html
+3. The Brain Imaging Data Structure (BIDS) standard, https://bids.neuroimaging.io/
+
+
+
+
+## Project #4: Machine Learning for Time Series Forecasting
+
+The goal of this project is to help develop the `aeon` forecasting package to make 
+it easier to use regression algorithms and improve the functionality.
+
+__Complexity__: HIGH
+
+__Duration__ 350 hours
+
+__Mentors__: Tony Bagnall ([@TonyBagnall](https://github.com/TonyBagnall)) and 
+Matthew Middlehurst ([@MatthewMiddlehurst](https://github.com/MatthewMiddlehurst)) 
+
+### Description
+
+
+This project will investigate algorithms for forecasting based on traditional machine
+learning (tree based) and time series machine learning (transformation based). Note
+this project will not involve deep learning based forecasting. It will involve
+helping develop the `aeon` framework to work more transparently with ML algorithms,
+evaluating regression algorithms already in `aeon`[1] for forecasting problems and
+implementing at least one algorithm from the literature not already in aeon, such as
+SETAR-Tree [3].
+
+### Required Skills
+
+- Python 3
+- Git and GitHub
+- Basic understanding of forecasting.
+- Basic understanding of machine learning, specifically decision trees.
+
+
+### Expected Outcome(s)
+
+- Contributions to the aeon forecasting module. 
+- Implementation of a machine learning forecasting algortihms. 
+- Help write up results for a technical report/academic paper (depending on outcomes).
+
+### References
+
+
+1. Guijo-Rubio, D.,Middlehurst, M., Arcencio, G., Furtado, D. and Bagnall, A.
+Unsupervised Feature Based Algorithms for Time Series Extrinsic Regression,
+arXiv2305.01429, 2023
+2. https://forecasters.org/resources/time-series-data/
+3. Godahewa, R., Webb, G.I., Schmidt, D. et al. SETAR-Tree: a novel and accurate
+tree algorithm for global time series forecasting. Mach Learn 112, 2555–2591 (2023).
+https://link.springer.com/article/10.1007/s10994-023-06316-x
 
