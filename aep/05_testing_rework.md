@@ -32,6 +32,11 @@ def test_parametrize_with_checks_classes(estimator, check):
 
 Which would run every test function on every estimator.
 
+This change will allow us to more easily edit the contents of these tests if necessary 
+and integrate our new experimental modules into the testing framework. The testing
+contents will also be more centralised, rather than split into double digit files
+throughout all modules of the package.
+
 ## Implementation
 
 1. Create proof of concept for the new testing framework and functions 
