@@ -33,69 +33,49 @@ Altough, the computational optimizations used in the similarity search
 litterature have not been widely adopted or explored in other the less
 "obvious" contexts such as shapelets.
 
-## Implementation
+#
+## Module structure :
+```
+- aeon/
+|---- similarity_search/
+|-------- BaseSimilaritySearch.py
+|-------- query_search/
+|------------ BaseQuerySearch.py
+|-------- series_search/
+|------------ BaseSeriesSearch.py
+|-------- index_search/
+|------------ BaseIndexSearch.py
+```
 
-The current implementation is designed around a new module named
-`similarity_search`, which contains `BaseSimilaritySearch`, a 
-base class for all applications that use a distance profile to
-extract a set of subseries. One subclass is `TopKSimilaritySearch`,
-which given a collection of time series and a query, will return 
-the most `k` similar subseries given a distance function.
+-  Query search : Given a query Q and a series/collection X, evaluate the similarity between Q and each admissible candidate in X.
+-  Series search : Given a length parameter (for now, we add techniques that don't require it later) do a query search for all admissible queries in a series/collection X. In the naive case, this is simply a broadcasting of query search, but more optimized algorithms exists for this case (e.g. STUMP/STOMP for Euclidean distance)
+-  Index search : Given a series/collection X and a length parameter (again, for now), build an indexing (e.g.what the Faiss library does) of all admissible candidates in X. Then, this indexing can be used as an estimator to answer query search tasks. This is generally used when you have a frozen historical set and want fast answers for new queries / when the inputs do not fit in memory.
 
-A submodule named `distance_profiles` contains the methods used
-to compute distance profiles for different distance functions.
-One additional goal of this submodule would be to provide optimized
-methods to compute distance profiles for other tasks that do not fit
-the similarity search module (e.g. shapelets).
+## Expected data and internal input conversion :
 
-## Examples code/structure (if applicable)
+We could accept series/collection in numpy and series in pd.Series data as input, but we would ideally convert all of it to numpy collection, and make use of the axis argument we introduced in other modules to avoid the channel problem:
 
-Base class: 
+For query search, we would implement heavy computation numba functions in a series case and loop over it with the collection. This can for example allow passing down (between series of a collection X) best-so-far values when doing early abandon or pruning with lower bounds.
 
-- BaseSimilaritySearch
-    - methods:
-      - \_\_init\_\_(distance, normalise, store_distance_profile): 
-          - takes distance: function, default = euclidean.
-          - wheter to use a z-normalized distance
-          - if the distance profiles should be stored after calling predict
-      - fit(X): 
-          - takes X: a 3D array : collection of multivariate series. How other
-            modules handle the case where we have a 2D array as input ? (i.e.
-            is it a collection of univariate series or a multivariate series)
-          - fetch the distance profile function linked to the distance and normalize parameters.
-          - returns self
-      - predict(q, q_index=None, exclusion_factor=2.0): 
-          - takes q: a single multivariate series (internal type?) tbc
-          - q_index to as a tuple (id_sample, id_timestamp) to specify if q was extracted from X
-          - Initiate the boolean mask of same shape as X given to the child classes and the
-            distance profile function, which store the part of the distance profile that should
-            not be computed. This can be used to indicate where the query was sampled in X, but
-            also during lower bound pruning to indicate which part are prunned.  
-          - exlucsion_factor specify the area around q_index (+/- l//exclusion_factor) that should
-            be excluded from the distance profile computation and left to np.inf.
-          - Compute the means and standard deviations of the subseries in X if normalize was True.
-           
-    - abstract:
-      - \_fit() :
-      - \_predict()
-      - \_iterator() maybe?
+- The same reasoning apply to series search.
+- The indexing case generally work with out-of-memory data, and require updates after loading new parts of the dataset, which are generally made of collections/big series.
 
-For the `distance_profile` submodule, we can distinguish different type of optimizations:
-    - Direct distance function optimization (e.g. Mueen)
-    - Early abandon of distance computation (e.g. EA-DTW)
-    - Lower bound pruning (e.g. Keogh LB for DTW)
-    
-## Considerations and Alternatives
+## Interaction with other modules:
 
-- do we even need a base class? Maybe just have a suite of functions?
+We would still use the distance module for the naive search cases, which are the one without speed-ups (which can lead to exact or approximative results). It would also be nice to offer some visualisation through the visualisation module.
+As for the reverse, which is which aeon estimator could benefit from the similarity search module speed-ups, it is still to be explored.
+
+## Documentation and notebooks:
+
+I would like to continue to have 3 type of notebooks for similarity search :
+
+-  A benchmark notebook, which would show the effect of different speed-up option, and would help us determine which one to put as "default" speed-ups for a given distance function.
+-  An example notebook, which shows how to use the estimators on some toy cases and how to visualize the results
+-  A more theoretical one, which would explain the maths behind the different speed-ups and the base tasks.
 
 ## Discussion
 
-I think base class can be useful to define the common code between some similarity search
-use cases. For example, TopK search or threshold search (i.e. all subseries with a distance
-bellow a threshold are returned). We might need to refine it when we extend the scope of
-the module (e.g. matrix profile), as I don't think the current `BaseSimilaritySearch` class
-would fit all applications.
+Open to discussion
 
 ## References
 
