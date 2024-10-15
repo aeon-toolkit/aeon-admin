@@ -6,7 +6,7 @@ Contributors: MatthewMiddlehurst
 
 The current general testing framework is confusing and complicated. This AEP aims to
 suggest a simplification for the general testing of estimators, based around the
-`scikit-learn1` `check_estimator` method of testing.
+`scikit-learn` `check_estimator` method of testing.
 
 ## Problem Statement and Use Cases
 
@@ -53,15 +53,18 @@ throughout all modules of the package.
 
 See [#1479](https://github.com/aeon-toolkit/aeon/pull/1479)
 
+PRs for part 2 and 3:
+- https://github.com/aeon-toolkit/aeon/pull/1770
+- https://github.com/aeon-toolkit/aeon/pull/1875
+- https://github.com/aeon-toolkit/aeon/pull/1877
+- https://github.com/aeon-toolkit/aeon/pull/2076
+- https://github.com/aeon-toolkit/aeon/pull/2086
+
 ## Considerations and Alternatives
 
 The testing module is currently marked as experimental, so while there may be some
 differences compared to previous testing for users if they use this functionality,
 no deprecation is required according to the current document.
-
-I am currently not including `BaseTransformer` and `BaseForecaster` in this update,
-as they are likely to be removed or heavily overhauled in the future. This would require
-keeping the old testing framework and isolating the tests for these frameworks.
 
 ## Discussion
 
