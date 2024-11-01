@@ -20,24 +20,47 @@ making it less at risk of overfitting the training data
 1. Networks design (use any backbone)
 2. Define sub module fors techniques (contrastive, distance based, prediction based etc.)
 3. Each SSL model will have its own mechanism with its own loss, independent of the backbone network used
+4. It will be a sub module of collection transformation, i.e tranformation/collection/self_supervised
+5. Example of file structure, assuming a contrastive learning method: aeon/transformation/collection/self_supervised/contrastive/_trilite.py
+6. need of `fit` but maybe `transform` instead of `predict` as the output is a feature transformation
 
 ## Example Code/Structure
+
+If the input series is of shape (n_samples, n_channels, n_timepoints), the SSL transformation ```X_transform``` will be of shape (n_samples, latent_dimension)
+
+```python
+from aeon.datasets import load_classification
+from aeon.transformatio.collection.self_supervised.contrastive import Trilite
+
+X, y = load_classification("ECG200")
+
+ssl_model = Trilite()
+ssl_model.fit(X)
+
+X_transform = ssl_model.transform(X)
+```
+
+For using it in a pipeline for classification zero-shot learning for example, it can be done as follows:
 
 ```python
 # Load and evaluate a SSL technique using aeon
 
 from aeon.datasets import load_classification
-from aeon.self_supervised.distance_based import Series2Vec
+from aeon.transformatio.collection.self_supervised.distance_based import Series2Vec
+from aeon.classification.distance_based import KNeighborsTimeSeriesClassifier as KNN
 
-# labels not used for the phase of SSL, can be loaded if needed posterior to SSL training and predicting
-xtrain, _ = load_classification("ECG200", split="train")
-xtest, _ = load_classification("ECG200", split="test")
+xtrain, ytrain = load_classification("ECG200", split="train")
+xtest, ytest = load_classification("ECG200", split="test")
 
 ssl_model = Series2Vec()
 ssl_model.fit(xtrain)
 
-latent_train = ssl_model.predict(xtrain) # produce latent features of train samples
-latent_test = ssl_model.predict(xtrain) # produce latent features of test samples
+xtrain_transform = ssl_model.transform(xtrain)
+xtest_transform = ssl_model.transform(xtest)
+
+knn = KNN(n_neighbors=4)
+knn.fit(xtrain_transform, ytrain)
+score = knn.score(xtest_transform, ytest)
 ```
 
 ## Considerations and Alternatives
@@ -50,5 +73,6 @@ N/A
 
 ## References
 
-[1] [TRILITE](https://hal.science/hal-04143083/document)
-[2] [series2vec](https://www.researchgate.net/profile/Navid-Mohammadi-Foumani/publication/376683892_Series2Vec_Similarity-based_Self-supervised_Representation_Learning_for_Time_Series_Classification/links/6583a4c70bb2c7472bfbd4d2/Series2Vec-Similarity-based-Self-supervised-Representation-Learning-for-Time-Series-Classification.pdf)
+[1] Ismail-Fawaz, Ali, et al. "Enhancing time series classification with self-supervised learning." International Conference on Agents and Artificial Intelligence (ICAART). SCITEPRESS-Science and Technology Publications, 2023.
+
+[2] Foumani, Navid Mohammadi, et al. "Series2vec: similarity-based self-supervised representation learning for time series classification." Data Mining and Knowledge Discovery (2024): 1-25.
