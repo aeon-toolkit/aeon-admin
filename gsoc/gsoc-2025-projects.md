@@ -1,4 +1,4 @@
-# GSoC 2024 Project Ideas
+# GSoC 2025 Project Ideas
 
 `aeon` is an open-source Python toolkit for time series machine learning algorithms, 
 evaluation, and other time series related utilities. It based on the `scikit-learn` 
