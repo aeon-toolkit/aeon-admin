@@ -140,17 +140,48 @@ and Antoine Guillaume ([@baraline](https://github.com/baraline))
 
 ### Description
 
-todo
+The `aeon` documentation is a key resource for users of the toolkit. It provides
+information on how to install the toolkit, how to use the toolkit, and how to
+contribute to the toolkit. The `aeon` documentation is built using `sphinx` and hosted 
+on `readthedocs`. 
+
+While there are always improvements that can be made to the general documentation itself
+(e.g., improving the clarity of the text, adding more examples, etc.) for both webpages
+and estimator docstrings, this project focuses on implementing functions to 
+automatically link relevant API pages together and ensure new pull requests are
+accompanied by the appropriate documentation. Some examples of improvements that could
+be made include:
+
+- Linking to examples to in API pages where the function/class is used similar to 
+`scikit-learn` (e.g., [here](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html#gallery-examples))
+- Improving the [estimator overview page](https://www.aeon-toolkit.org/en/stable/estimator_overview.html)
+by further integrating the tags system or adding search and filtering functionality
+- Implementing workflows to ensure that new public functionality includes a valid
+docstring (i.e. has a description, parameters, returns, etc. sections where relevant)
+
+There is a lot of potential for additional functionality, so feel free to suggest
+improvements or new features outside the examples provided.
 
 ### Required Skills
 
-- todo
+- Python 3
+- Git and GitHub
+- Understanding of how `sphinx` is used to build documentation
+
+Optional but useful skills:
+- Understanding of GitHub Actions and writing workflows
 
 ### Expected Outcome(s)
 
-- todo
+- At least one new feature or improvement to the `aeon` documentation webpage
+(outside of general text improvements)
 
-## Project #5: Maintenance - Modernising the `aeon` linting and type checking workflow
+And/Or (depending on project duration scope)
+
+- Improvement to the `aeon` testing suite to ensure that new PRs
+are accompanied by the appropriate documentation
+
+## Project #5: Maintenance - Modernising the `aeon` linting and type checking workflows
 
 __Complexity__: Medium
 
@@ -162,12 +193,35 @@ and Antoine Guillaume ([@baraline](https://github.com/baraline))
 
 ### Description
 
-todo
+This project involves updating the `aeon` linting and type checking workflows to
+use modern tools and ensure that the codebase is up to date with the latest
+Python standards. 
+
+The `aeon` toolkit uses `pre-commit` to run code quality checks on all code changes
+and ensure that they meet the project's standards. This includes a number of checks and
+formatting tools, such as `black`, `flake8`, and `isort` (see [here](https://github.com/aeon-toolkit/aeon/blob/main/.pre-commit-config.yaml)).
+Over time new tools have been released such as `ruff` and tools we previously used such
+as `pydocstyle` have been deprecated. The first part of this project will involve
+modernising the `pre-commit` configuration to use the latest tools.
+
+`aeon` contributors have been encouraged to add type hints to the codebase, but this
+is a gradual process and there are still many parts of the codebase that are not fully
+typed. A big issue we face in this is the current lack of automated testing to ensure
+that implemented type hints are accurate. This second part project will involve 
+implementing robust testing utilities to help contributors and reviewers ensure that
+new type hints are correct.
+
+Other ideas to improve the code quality testing in `aeon` pull requests or deliver
+feedback from tests to contributors are welcome.
 
 ### Required Skills
 
-- todo
+- Python 3
+- Git and GitHub
+- Understanding of GitHub Actions and writing workflows
 
 ### Expected Outcome(s)
 
-- todo
+- Updated workflows for checking code quality in `aeon` pull requests
+- Automated testing and utilities to help contributors implement accurate type hints
+for `aeon` code.
