@@ -114,19 +114,38 @@ and Matthew Middlehurst ([@MatthewMiddlehurst](https://github.com/MatthewMiddleh
 
 ### Description
 
-todo
+Time series forecasting plays a crucial role in numerous domains, including finance, healthcare,
+energy, and climate science. This project aims to integrate deep learning-based time series forecasting
+models into aeon. By leveraging state-of-the-art architectures such as Transformers [1], Temporal
+Convolutional Networks (TCNs) [2], and Long Short-Term Memory (LSTM) [3] networks, the project will
+enhance aeon's forecasting capabilities. The goal is to provide scalable, efficient, and
+user-friendly deep learning models tailored for time series applications, expanding
+aeon's functionality and usability for researchers and practitioners.
 
 ### Required Skills
 
-- todo
+- Python 3
+- Experience with TensorFlow or PyTorch for building and training deep learning models.
+- Git and Github
+- Basic knowledge about Time Series Forecasting is appreciated
 
 ### Expected Outcome(s)
 
-- todo
+- A python framework for deep learning models as a submodule of the aeon time series forecasting module.
+- Integration the models' neural network part into the networks module of aeon.
+- Integration of features similar to existing deep learning modules in aeon such as saving and loading models.
+- Testing the developped models with all their features and attend a high coverage.
+- Developing notebooks for deep time series forecasting.
 
 ### References
 
-1. todo
+3. Zhou, Haoyi, et al. "Informer: Beyond efficient transformer for long sequence time-series forecasting."
+Proceedings of the AAAI conference on artificial intelligence. Vol. 35. No. 12. 2021.
+1. Bai, Shaojie, J. Zico Kolter, and Vladlen Koltun. "An empirical evaluation of generic
+convolutional and recurrent networks for sequence modeling. arXiv."
+arXiv preprint arXiv:1803.01271 10 (2018).
+2. Salinas, David, et al. "DeepAR: Probabilistic forecasting with autoregressive recurrent
+networks." International journal of forecasting 36.3 (2020): 1181-1191.
 
 ## Project #4: Documentation - Improving the `aeon` documentations interactivity and testing
 
