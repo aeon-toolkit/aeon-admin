@@ -88,19 +88,36 @@ and Matthew Middlehurst ([@MatthewMiddlehurst](https://github.com/MatthewMiddleh
 
 ### Description
 
-todo
+This project will investigate algorithms for forecasting based on traditional machine
+learning (tree based) and time series machine learning (transformation based). Note
+this project will not involve deep learning based forecasting. It will involve
+helping develop the `aeon` framework to work more transparently with ML algorithms,
+evaluating regression algorithms already in `aeon`[1] for forecasting problems [2] and
+implementing at least one algorithm from the literature not already in `aeon`, such as
+SETAR-Tree [3].
 
 ### Required Skills
 
-- todo
+- Python 3
+- Git and GitHub
+- Basic understanding of forecasting.
+- Basic understanding of machine learning, specifically decision trees.
 
 ### Expected Outcome(s)
 
-- todo
+- Contributions to the `aeon` forecasting module. 
+- Implementation of a machine learning forecasting algortihms. 
+- Help write up results for a technical report/academic paper (depending on outcomes).
 
 ### References
 
-1. todo
+1. Guijo-Rubio, D., Middlehurst, M., Arcencio, G., Silva, D.F. and Bagnall, A., 2023. 
+Unsupervised feature based algorithms for time series extrinsic regression. 
+arXiv preprint arXiv:2305.01429.
+2. https://forecasters.org/resources/time-series-data/
+3. Godahewa, R., Webb, G.I., Schmidt, D. and Bergmeir, C., 2023. SETAR-Tree: a novel 
+and accurate tree algorithm for global time series forecasting. Machine Learning, 
+pp.1-37.
 
 ## Project #3: Forecasting - Deep learning for forecasting
 
@@ -116,17 +133,19 @@ and Matthew Middlehurst ([@MatthewMiddlehurst](https://github.com/MatthewMiddleh
 
 Time series forecasting plays a crucial role in numerous domains, including finance, healthcare,
 energy, and climate science. This project aims to integrate deep learning-based time series forecasting
-models into aeon. By leveraging state-of-the-art architectures such as Transformers [1], Temporal
+models into `aeon`. By leveraging state-of-the-art architectures such as Transformers [1], Temporal
 Convolutional Networks (TCNs) [2], and Long Short-Term Memory (LSTM) [3] networks, the project will
-enhance aeon's forecasting capabilities. The goal is to provide scalable, efficient, and
+enhance `aeon`'s forecasting capabilities. The goal is to provide scalable, efficient, and
 user-friendly deep learning models tailored for time series applications, expanding
-aeon's functionality and usability for researchers and practitioners.
+`aeon`'s functionality and usability for researchers and practitioners.
 
 ### Required Skills
 
 - Python 3
 - Experience with TensorFlow or PyTorch for building and training deep learning models.
 - Git and Github
+
+Optional but useful skills:
 - Basic knowledge about Time Series Forecasting is appreciated
 
 ### Expected Outcome(s)
@@ -139,12 +158,12 @@ aeon's functionality and usability for researchers and practitioners.
 
 ### References
 
-3. Zhou, Haoyi, et al. "Informer: Beyond efficient transformer for long sequence time-series forecasting."
+1. Zhou, Haoyi, et al. "Informer: Beyond efficient transformer for long sequence time-series forecasting."
 Proceedings of the AAAI conference on artificial intelligence. Vol. 35. No. 12. 2021.
-1. Bai, Shaojie, J. Zico Kolter, and Vladlen Koltun. "An empirical evaluation of generic
+2. Bai, Shaojie, J. Zico Kolter, and Vladlen Koltun. "An empirical evaluation of generic
 convolutional and recurrent networks for sequence modeling. arXiv."
 arXiv preprint arXiv:1803.01271 10 (2018).
-2. Salinas, David, et al. "DeepAR: Probabilistic forecasting with autoregressive recurrent
+3. Salinas, David, et al. "DeepAR: Probabilistic forecasting with autoregressive recurrent
 networks." International journal of forecasting 36.3 (2020): 1181-1191.
 
 ## Project #4: Documentation - Improving the `aeon` documentations interactivity and testing
