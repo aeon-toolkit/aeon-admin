@@ -263,3 +263,40 @@ feedback from tests to contributors are welcome.
 - Updated workflows for checking code quality in `aeon` pull requests
 - Automated testing and utilities to help contributors implement accurate type hints
 for `aeon` code.
+
+## Project #6: Enhancement - Implementing multithreading for `aeon` estimators and tools for evaluating multithreading performance
+
+__Complexity__: Medium
+
+__Duration__ 175 or 350 hours
+
+__Mentors__: Matthew Middlehurst ([@MatthewMiddlehurst](https://github.com/MatthewMiddlehurst)),
+
+### Description
+
+Multithreading in `aeon` for estimators does not have a set structure or library that must
+be used. Most algorithms which have an `n_jobs` parameter available use a mix of Joblib and 
+numba multithreading. Algorithms which do have the capability for multithreading have not
+been thoroughly tested, and as such the efficiency of these implementations is unknown.
+
+As well as expanding the amount of estimators which can use multiple threads, we would
+like to develop tools to evaluate whether this threading is efficient and develop 
+documentation for contributors which want to add multithreading to `aeon` estimators.
+
+This project is very open, so please do be specific on your plans to improve
+multithreading in `aeon` if you make an application.
+
+### Required Skills
+
+- Python 3
+- Git and GitHub
+- Knowledge of Joblib and/or other libraries multithreading in Python 
+
+Optional but useful skills:
+- Understanding of GitHub Actions and writing workflows
+- Experience with writing multithreaded code
+
+### Expected Outcome(s)
+
+- Tools and testing for evaluting the efficiency of multithreaded code while maintaining single threaded performance
+- The addition of multithreading as a capability for `aeon` estimators (prefereably in the `classification`, `regression` and `clustering` modules)
