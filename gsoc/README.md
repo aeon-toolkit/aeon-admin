@@ -20,7 +20,8 @@ Participants will need to submit their proposal(s) to [NumFOCUS on the GSoC webp
 Application period opens March 24 and closes April 8.
 
 Application templates are evailable in the [templates/](https://github.com/aeon-toolkit/aeon-admin/tree/main/gsoc/templates) 
-directory. These are not mandatory, but may be useful. See the README within.
+directory. You can use either for your application to NumFOCUS. These are not mandatory, 
+but may be useful. See the README within.
 
 ## Use of AI tools
 
