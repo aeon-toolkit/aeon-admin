@@ -19,6 +19,9 @@ The latest list of potential projects is available at:
 Participants will need to submit their proposals to [NumFOCUS on the GSoC webpage](https://summerofcode.withgoogle.com/programs/2025/organizations/numfocus).
 Application period opens March 24 and closes April 8.
 
+Application templates are evailable in the [templates/](https://github.com/aeon-toolkit/aeon-admin/tree/main/gsoc/templates) 
+directory. These are not mandatory, but may be useful. See the README within.
+
 ## Use of AI tools
 
 We discourage the use of AI tools in the creation of GSoC applications and as the main 
