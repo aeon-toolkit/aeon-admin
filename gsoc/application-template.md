@@ -12,16 +12,12 @@
 | Timezone:       | Your timezone                                                                                               |
 | Email:          | Your email                                                                                                  |
 | Country:        | Your country                                                                                                |
-| University:     | Your university, or other institiute if relevant                                                            |
-| Course:         | Related courses                                                                                             |
+| Institute:      | Your university, institute or other affliation if relevant                                                  |
+| Course:         | Related courses i.e. degree or PhD                                                                          |
 | Availability:   | The dates you are available over the summer (you do not have to be available every week within this period) |
 | Links:          | Related links i.e. linkedin, planned blog for GSoC etc.                                                     |
-| Resume:         | Your link to your resume (optional)                                                                         |
-| Project length: | Length of your proposed project   
-
-## Why did I select `aeon`
-
-Please explain your motivations for contributing to `aeon`.
+| Resume:         | Your link to your resume (optional, only used rarely)                                                       |
+| Project length: | Length of your proposed project                                                                             |
 
 ## Abstract 
 
@@ -30,15 +26,16 @@ for this proposal. Explain the main goal of the proposal.
 
 ## Milestones
 
-Describe in details the steps planned to achieve the goals mentioned above, feel free 
-to structure this section as you want. Remember the documentation and testing for 
-your project. List of outcomes from the project.
+Describe in details the steps planned to achieve the goals mentioned above and 
+deliverables, feel free to structure this section as you want. Remember the 
+documentation and testing for your project. List of outcomes from the project.
 
 ## Timeline
 
-Give a rough timeline for the project, again aspects other than code. Take into account
-reviews and fixes, you may not get it correct the first time around. Optionally, you 
-can explain additional goals that could be tackled during this project if time allows.
+Give a rough timeline for the project, including aspects other than code. Take into 
+account reviews and fixes, you may not get it correct the first time around. Optionally, 
+you can explain additional goals that could be tackled during this project if time 
+allows.
 
 How long do you want your project to be? Is it short, medium or Large? 
 Dates can be flexible and discussed when starting.
@@ -51,19 +48,29 @@ Let us know if you expect something specific from our mentors and the GSoC progr
 ## What are my other commitments?
 
 Please let us know if you have other commitments for the summer. For example, classes, 
-summer job, etc.
+summer job, etc. Explain how you plan to manage your time to complete the project in 
+the given time frame.
 
 ## About me (extended)
 
+A more detailed description of yourself, your background, and your interests.
 
+## Why did I select `aeon`
+
+Please explain your motivations for contributing to `aeon`.
 
 ## Open source contributions and projects
 
-Let us know if you already made contributions to `aeon` or other open source projects
+Let us know if you already made contributions to `aeon` or other open source projects.
+Include a maximum of three links to pull requests (open or closed), two of which can be 
+`aeon` pull requests. 
+
+If you have not made any contributions yet, please explain why as this is usually a
+dealbreaker given the amount of quality applicants we receive.
 
 ## Development Experience
 
-Let us know if you have related experience, past job etc. 
+Let us know if you have related experience, i.e. courses, past job, internships, etc. 
 
 ## Appendix
 
