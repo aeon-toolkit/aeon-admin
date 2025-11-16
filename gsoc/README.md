@@ -6,7 +6,7 @@ instructions may result in your application being rejected.
 
 Take a look at our [list of ideas for 2026 projects](https://github.com/aeon-toolkit/aeon-admin/blob/main/gsoc/gsoc-2026-projects.md).
 
-Thank you for your interest in contributing to `aeon` as part of the GSoC program 
+Thank you for your interest in contributing to `aeon` as part of the GSoC program, 
 and we look forward to your application!
 
 ## GSoC resources
@@ -24,8 +24,8 @@ the general GSoC and NumFOCUS guidelines.
 
 ## Experience Requirements
 
-Experience requirements will vary by project, and are listed in the project ideas.
-We categorise projects by complexity as either Low, Medium, or High and will
+Experience requirements will vary by project and are listed in the project ideas.
+We categorise projects by complexity as either Low, Medium, or High, and will
 expect an increasing amount of background knowledge accordingly. All projects
 will require a good understanding of Python programming and Git.
 
@@ -64,13 +64,13 @@ licence file) and always attribute the original source if permission is granted
 (i.e. [here](https://github.com/aeon-toolkit/aeon/blob/main/aeon/distances/elastic/_bounding_matrix.py#L63)
 and [here](https://github.com/aeon-toolkit/aeon/blob/main/aeon/transformations/collection/convolution_based/_minirocket.py#L55)). 
 Even with permission, we may request an alternative implementation.
-- We are aware other implementations exist for some of the algorithms requested. Do not 
+- We are aware that other implementations exist for some of the algorithms requested. Do not 
 try to copy and paste this code and pass it off as your own; we have enough experience 
 to tell.
-- Unless you have talked to the developers/issue creators, please only create pull 
+- Unless you have talked to the developers or issue creators, please only create pull 
 requests for issues with the `GSoC` or `good first issue` label. See the FAQ for more 
 details on creating other pull requests.
-- Do not abuse AI to create your application or contributions. More information below
+- Do not abuse AI to create your application or contributions. More information is below
 and in the contributor guide.
 - Do not spam developers with requests to review your pull requests or applications.
 - Create your application using the `aeon` GSoC [template](https://github.com/aeon-toolkit/aeon-admin/tree/main/gsoc/application-template.md).
@@ -81,9 +81,9 @@ We discourage the use of AI tools in the creation of GSoC applications and as th
 provider of contributions. Using AI tools to proofread or generate menial code is 
 acceptable. We do not care if you are using Copilot to generate a few lines of simple 
 code if you understand what you are submitting. If you do use any AI or LLMs in your 
-contributions or proposal, please disclose their use in your pull requests and/or write 
-up. Additionally, you must fully understand and be able to explain any AI-generated code 
-you submit. 
+contributions or proposal, please disclose their use in your pull requests and/or 
+write-up. Additionally, you must fully understand and be able to explain any AI-generated 
+code you submit. 
 
 Having AI write your timeline and large chunks of your proposal, or submitting full 
 pull requests of noticeably AI-generated content is likely to disqualify your 
@@ -93,27 +93,27 @@ contributions, is likely to have the same result.
 ## Making an application
 
 Participants will need to submit their proposal(s) to [NumFOCUS on the GSoC webpage](https://summerofcode.withgoogle.com/programs/2025/organizations/numfocus).
-The application submission period opens ? and closes ?.
+The application submission period opens on ? and closes on ?.
 
 Applicants must use the sections in the `aeon` [template](https://github.com/aeon-toolkit/aeon-admin/tree/main/gsoc/application-template.md) 
 to create their application. Note the limit for linking to open-source contributions.
-Please follow the following rules when making your application:
+Please follow these rules when making your application:
 
-- When making your web application please start with `aeon`, followed by a dash and
-then the project name i.e. "aeon - My Project". This will help us identify your
+- When making your web application, please start with `aeon`, followed by a dash and
+then the project name, i.e., "aeon - My Project". This will help us identify your
 application among other NumFOCUS projects. If we cannot find your application, we
 will not review it.
-- Please use a font size of 10pt or 12pt for standard text, headings can be larger. Use
+- Please use a font size of 10pt or 12pt for standard text; headings can be larger. Use
 appropriate line spacing, margins and section structure.
-- Applications should be at least 4 pages long, and no longer than 20 pages long
-(including figures, tables and references). This is a guideline, do not submit 20
-pages of text and expect us to read it all.
+- Applications should be at least 4 pages long and no longer than 20 pages long
+(including figures, tables and references). This is a guideline; do not submit 20
+pages of pure text and expect us to read it all.
 - Submit your application as a PDF file.
 
 We also heavily recommend you:
 
 - Make sure your PDF renders correctly and ensure attention to detail. Some errors in
-the past include: Broken links, missing sections and typos.
+the past include: broken links, missing sections, and typos.
 - Include at least one link to a pull request you have made to `aeon` or another
 open-source project.
 
@@ -134,18 +134,19 @@ If we feel that you have cut corners making multiple applications and are willin
 work on any project as long as it is GSoC, we may be less likely to take you on for the 
 summer.
 
-If we suspect that you have gone over the three application limit by creating multiple
+If we suspect that you have gone over the three-application limit by creating multiple
 accounts, we will not accept your application.
 
 **Q. Can you review my pull request?**
 
-We will try and aim to look at all code submissions in a reasonable amount of time. 
+We will try to look at all code submissions in a reasonable amount of time. 
 This is dependent on the availability of developers during the application period
 where traffic is heavy, however. You can add unmerged pull requests to your 
 application and pull requests to other open-source projects.
 
 Mentors have dedicated time to mentor accepted applicants during the summer period, so 
-do not worry about lack of interaction with project mentors and developers if accepted.
+do not worry about a lack of interaction with project mentors and developers if you are
+accepted.
 
 **Q. Can you assign me to issue #XXXX?**
 
@@ -169,12 +170,12 @@ before asking questions and applying.
 
 **Q. Project X only mentions algorithm Y, is that all I will need to implement?** 
 
-This is dependent on the project, but we usually won't fully flesh out the projects
+This depends on the project, but we usually won't fully flesh out the projects
 in our idea list. This is up to you to do in your application. Applications which
-understand related works and make proposals on how to extend the project is there is
+understand related works and make proposals on how to extend the project if there is
 additional time will be looked upon more favourably.
 
-**Q. There are a lot of related algorithms that I include my proposal for project X, should I add them all?** 
+**Q. There are a lot of related algorithms that I could include in my proposal for project X; should I add them all?** 
 
 What you add to your implementation plan is somewhat up to you. Keep in mind that 
 a single excellent and well-tested implementation is likely better than three mediocre 
@@ -186,10 +187,15 @@ you plan to cut corners or copy and paste code from other projects.
 
 **Q. Can I start coding for the project before my application is accepted?**
 
-We have no issue with creating code for the project before projects are announced or 
+We have no issue with you creating code for the project before projects are announced or 
 including code listings in your application. However, it is unlikely we will accept pull 
 requests on project topics while applications are open or another applicant is working 
 on the project as part of GSoC.
+
+Regardless of what you come in with beforehand, we expect you to propose enough
+uncompleted topics to work on for the duration of your project. Completing the whole
+project beforehand and then disappearing for the summer months will lead to a
+failed project.
 
 ## Acknowledgements
 
