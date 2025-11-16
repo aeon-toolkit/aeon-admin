@@ -195,7 +195,7 @@ on the project as part of GSoC.
 Regardless of what you come in with beforehand, we expect you to propose enough
 uncompleted topics to work on for the duration of your project. Completing the whole
 project beforehand and then disappearing for the summer months will lead to a
-failed project
+failed project.
 
 ## Acknowledgements
 
