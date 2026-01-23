@@ -3,7 +3,7 @@
 
 # *Project title*
 
-`aeon` GSoC 2025 proposal by *Author Name*
+`aeon` GSoC 202* proposal by *Author Name*
 
 ## About me (summary)
 
